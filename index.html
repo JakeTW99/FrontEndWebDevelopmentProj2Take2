@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game Quiz</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <main id="overall-container">
+        <section id="start-screen" class="screen active">
+            <h1>Are you prepared?</h1>
+            <p>The following quiz will take you through 8 questions about various aspects of the Video Game world.</p>
+            <button id="start-btn">Start the Quiz</button>
+        </section>
+
+        <section id="quiz-screen" class="screen">
+            <header id="progress">Question <span id="current-question-number">1</span> of <span
+                    id="total-questions">8</span> | Score: <span id="current-score">0</span> out of 8</header>
+            <br>
+            <article id="question-text">Question</article>
+            <br>
+            <div id="options-container"></div>
+            <p id="feedback"></p>
+            <button id="submit-btn">Submit Answer</button>
+            <button id="next-btn">Next Question</button>
+        </section>
+
+
+        <section id="result-screen" class="screen">
+            <h2>Let's see how you did!</h2>
+            <h2>Your Score: <span id="final-score"></span></h2>
+            <button id="restart-btn">Restart Quiz</button>
+        </section>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
