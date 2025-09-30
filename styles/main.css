@@ -1,0 +1,107 @@
+/*screen handling*/
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/*General Styling for containers, buttons*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+}
+
+#overall-container {
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+}
+
+#options-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.option-btn {
+    flex: 1 1 calc(50% - 7.5px);
+    width: auto;
+    margin: 0;
+    padding: 15px; 
+    font-size: 16px; 
+    background-color: #007BFF; 
+    color: white;
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: left; 
+}
+
+button:not(.option-btn) {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 18px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.option-btn.selected {
+    background-color: darkblue;
+
+}
+.option-btn:hover {
+    background-color: darkblue;
+}
+button:not(.option-btn):hover {
+    background-color: darkgreen;
+}
+
+/* Adjusts to mobile devices */
+@media (max-width: 480px) {
+    #overall-container {
+        max-width: 100%;
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    .option-btn {
+        flex: 1 1 100%;
+    }
+
+}
